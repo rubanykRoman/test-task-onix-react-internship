@@ -106,6 +106,41 @@ html {
           align-items: center;
 }
 
+.main hr {
+  border: 1px solid black;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.main__task-3 h3 {
+  text-align: center;
+}
+
+.main__task-3 table {
+  border: 2px solid grey;
+}
+
+.main__task-3 table th,
+.main__task-3 table td {
+  border: 1px solid grey;
+  text-align: center;
+}
+
+.main__task-3 table th {
+  cursor: pointer;
+}
+
+.main__task-3 button {
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: #2251ad;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
 .main__project-name {
   margin-top: 50px;
   margin-bottom: 5px;

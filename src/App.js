@@ -6,11 +6,6 @@ import PropTypes from 'prop-types';
 //данные массива names и объекта countriesMembers должны получаться динамически
 
 const names = ["Stefani Germanotta", "Peter Parker", "Elon Musk", "James Howlett", "Bruce wayne"];
-const name1 = names[0];
-const name2 = names[1];
-const name3 = names[2];
-const name4 = names[3];
-const name5 = names[4];
 
 const countriesMembers = { "USA": 27002, "France": 9830,"Sweden":5219,"Ukraine":4450 }
 const country1 = "USA";
@@ -21,6 +16,39 @@ const members1 = countriesMembers.USA;
 const members2 = countriesMembers.France; 
 const members3 = countriesMembers.Sweden;
 const members4 = countriesMembers.Ukraine;
+
+const years = ["2017", "2020", "2019", "2018", "2021"];
+const quantity = [20456, 25876, 24200, 23263, 51004];
+
+const withSortFoo = () => {
+  years.sort((a, b) => a - b);
+  console.log(years)
+};
+
+const bubbleSort = () => {
+  for (let i = 0; i < quantity.length-1; i++) {
+        let flagSwap = false;
+        for (let j = 0; j < quantity.length - 1 - i; j++) {
+            if (quantity[j] > quantity[j + 1]) {
+                [quantity[j], quantity[j + 1]] = [quantity[j + 1], quantity[j]];
+                flagSwap = true;
+            }
+        }
+        if (!flagSwap) break;
+  }
+  console.log(quantity);
+};
+
+const addItem = () => {
+  years.push("new item");
+  console.log(years);
+};
+
+const removeItem = () => {
+  years.pop();
+  console.log(years);
+};
+
 
 
 function App() {
@@ -40,44 +68,85 @@ function App() {
       </header>
       <main>
         <div className="main">
-          <h1 className="main__project-name"><strong><span>Support the animals!</span></strong></h1>
-          <p className="main__project-description">Register and participate in the volunteer support program for stray animals <br></br> at our shelter this weekend with your family or team</p>
-           <div className="main__buttom-wrap">
-                <button className="join-button"><span className="join">Join Us</span></button>
-          </div>
-          <div className="main__dinamic-parts">
-            <div className="new-members">
-              <h4>Last New members:</h4>
-                <ul>
-                  <li>{name1}</li>
-                  <li>{name2}</li>
-                  <li>{name3}</li>
-                  <li>{name4}</li>
-                  <li>{name5}</li>
-                 </ul>
+          <hr/>
+            <div className="main__task-3">
+              <h3>Task-3</h3>
+              <table rules="3">
+                <thead>
+                  <tr>
+                      <th onClick={withSortFoo}>Year</th>
+                      <th onClick={bubbleSort}>Quantity</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>{years[0]}</td>
+                      <td>{quantity[0]}</td>
+                    </tr>
+                    <tr>
+                      <td>{years[1]}</td>
+                      <td>{quantity[1]}</td>
+                    </tr>
+                    <tr>
+                      <td>{years[2]}</td>
+                      <td>{quantity[2]}</td>
+                    </tr>
+                    <tr>
+                      <td>{years[3]}</td>
+                      <td>{quantity[3]}</td>
+                    </tr>
+                    <tr>
+                      <td>{years[4]}</td>
+                      <td>{quantity[4]}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button onClick={addItem}>ADD</button>
+              <button onClick={removeItem}>REMOVE</button>
             </div>
-            <div className="most-popular-countries">
+          <hr/>
+            <h1 className="main__project-name"><strong><span>Support the animals!</span></strong></h1>
+            <p className="main__project-description">Register and participate in the volunteer support program for stray animals <br></br> at our shelter this weekend with your family or team</p>
+            <div className="main__buttom-wrap">
+                  <button className="join-button"><span className="join">Join Us</span></button>
+            </div>
+            <div className="main__dinamic-parts">
+              <div className="new-members">
+                <h4>Last New members:</h4>
+                  <ul>
+                    <li>{names[0]}</li>
+                    <li>{names[1]}</li>
+                    <li>{names[2]}</li>
+                    <li>{names[3]}</li>
+                    <li>{names[4]}</li>
+                  </ul>
+              </div>
+              <div className="most-popular-countries">
               <table className="countries" cellPadding="3">
-                <tr>
-                  <th>Country</th>
-                  <th>Members</th>
-                </tr>
-                <tr>
-                  <td>{country1}</td>
-                  <td>{members1}</td>
-                </tr>
-                <tr>
-                  <td>{country2}</td>
-                  <td>{members2}</td>
-                </tr>
-                <tr>
-                  <td>{country3}</td>
-                  <td>{members3}</td>
-                </tr>
-                <tr>
-                  <td>{country4}</td>
-                  <td>{members4}</td>
-                </tr>
+                <thead>
+                  <tr>
+                    <th>Country</th>
+                    <th>Members</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>{country1}</td>
+                    <td>{members1}</td>
+                  </tr>
+                  <tr>
+                    <td>{country2}</td>
+                    <td>{members2}</td>
+                  </tr>
+                  <tr>
+                    <td>{country3}</td>
+                    <td>{members3}</td>
+                  </tr>
+                  <tr>
+                    <td>{country4}</td>
+                    <td>{members4}</td>
+                  </tr>
+                </tbody>                 
               </table>
             </div>
           </div>
@@ -101,11 +170,6 @@ function App() {
 App.propTypes = {
 
   names: PropTypes.array,
-  name1: PropTypes.string,
-  name2: PropTypes.string,
-  name3: PropTypes.string,
-  name4: PropTypes.string,
-  name5: PropTypes.string,
   
   countriesMembers: PropTypes.object,
   country1: PropTypes.string,
@@ -116,8 +180,11 @@ App.propTypes = {
   members1: PropTypes.number,
   members2: PropTypes.number,
   members3: PropTypes.number,
-  members4: PropTypes.number
+  members4: PropTypes.number,
 
+  years: PropTypes.array, 
+  quantity: PropTypes.array,
+  
 }
 
 export default App;

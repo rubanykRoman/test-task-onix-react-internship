@@ -72,6 +72,37 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    hr {
+        border: 1px solid black;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    &__task-3 {
+        h3 {
+            text-align: center;
+        }
+        table {
+            border: 2px solid grey;
+            th,
+            td {
+                border: 1px solid grey;
+                text-align: center;
+            }
+            th {
+                cursor: pointer;
+            }
+        }
+        button {
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 20px;
+            background-color: #2251ad;
+            text-align: center;
+            vertical-align: middle;
+            color: #ffffff;
+        }
+    }
     &__project-name {
         margin-top: 50px;
         margin-bottom: 5px;

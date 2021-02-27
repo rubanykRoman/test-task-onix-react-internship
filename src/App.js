@@ -49,7 +49,56 @@ const removeItem = () => {
   console.log(years);
 };
 
+let finals = {
+  2020: {
+    winner: "Bayern Munich",
+    finalist: "PSG",
+  },
+  2019:{
+    winner: "Liverpool",
+    finalist: "Tottenham Hotspur",
+  },
+  2018: {
+    winner: "Real Madrid",
+    finalist: "Liverpool",
+  },
+  2017: {
+    winner: "Real Madrid",
+    finalist: "Juventus",
+  },
+  2016: {
+    winner: "Real Madrid",
+    finalist: "Atletico Madrid",
+  },
+}
 
+const w1 = finals[2020].winner;
+const w2 = finals[2019].winner;
+const w3 = finals[2018].winner;
+const w4 = finals[2017].winner;
+const w5 = finals[2016].winner;
+
+const l1 = finals[2020].finalist;
+const l2 = finals[2019].finalist;
+const l3 = finals[2018].finalist;
+const l4 = finals[2017].finalist;
+const l5 = finals[2016].finalist;
+
+finals[2015] = {
+    winner: "Barselona",
+    finalist: "Juventus",
+}
+delete finals[2015];
+
+const wishes =  {
+2018: {
+    winner: "Dynamo Kyiv",
+    finalist: "Real Madrid",
+  },
+}
+
+finals = { ...finals, ...wishes};
+console.log(finals);
 
 function App() {
   return (
@@ -68,6 +117,46 @@ function App() {
       </header>
       <main>
         <div className="main">
+          <hr/>
+           <div className="main__task-4">
+              <h3>Finals of Champions League (Task-4)</h3>
+              <table rules="3">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Winner</th>
+                    <th>Finalist</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>{2020}</td>
+                      <td>{w1}</td>
+                      <td>{l1}</td>
+                    </tr>
+                    <tr>
+                      <td>{2019}</td>
+                      <td>{w2}</td>
+                      <td>{l2}</td>
+                    </tr>
+                    <tr>
+                      <td>{2018}</td>
+                      <td>{w3}</td>
+                      <td>{l3}</td>
+                    </tr>
+                    <tr>
+                      <td>{2017}</td>
+                      <td>{w4}</td>
+                      <td>{l4}</td>
+                    </tr>
+                    <tr>
+                      <td>{2016}</td>
+                      <td>{w5}</td>
+                      <td>{l5}</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
           <hr/>
             <div className="main__task-3">
               <h3>Task-3</h3>

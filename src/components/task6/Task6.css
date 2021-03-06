@@ -1,0 +1,15 @@
+h1,
+h3 {
+    text-align: center;
+}
+
+li {
+    margin: 20px 10px;
+    transition: 0.5s;
+}
+
+li:hover {
+    cursor: pointer;
+    font-style: italic;
+    color: blue;
+}

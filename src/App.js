@@ -2,7 +2,8 @@ import './App.scss';
 import logo from './logo.png';
 import main from './main.png';
 import PropTypes from 'prop-types';
-// import Task4 from './components/task4/Task4';
+import Task4 from './components/task4/Task4';
+import Task6 from './components/task6/Task6';
 
 //данные массива names и объекта countriesMembers должны получаться динамически
 
@@ -106,17 +107,17 @@ function addItemObj(obj, name, item) {
 const resAftDel = delItemObj(finals, 2020);
 const resAftAdd = addItemObj(finals, 2015, { winner: "Barselona", finalist: "Juventus", });
 
-console.log("Data obj");
-console.log(finals);
+// console.log("Data obj");
+// console.log(finals);
 
-console.log("New obj after deleting:");
-console.log(resAftDel);
+// console.log("New obj after deleting:");
+// console.log(resAftDel);
 
-console.log("New obj After adding:");
-console.log(resAftAdd);
+// console.log("New obj After adding:");
+// console.log(resAftAdd);
 
-console.log("Data obj");
-console.log(finals);
+// console.log("Data obj");
+// console.log(finals);
 
 // const wishes =  {
 // 2018: {
@@ -145,8 +146,11 @@ function App() {
       </header>
       <main>
         <div className="main">
-          {/* <Task4></Task4> */}
           <hr/>
+          <Task6></Task6>
+          <hr/>
+          {/* <Task4></Task4> */}
+          {/* <hr/> */}
            <div className="main__task-4">
               <h3>Task 4,5</h3>
               <h3>Finals of Champions League</h3>

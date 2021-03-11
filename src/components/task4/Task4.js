@@ -1,62 +1,68 @@
 import React, { Component } from 'react'
-import TrTable from './TableRow'
+import Task4Table from './Task4Table'
+import './Task4.scss'
 
-export default class Task5 extends Component {
+export default class Task4 extends Component {
 
     state = {
         finals: [
             {
-                match: {
-                    year:2020,
-                    winner: "Bayern Munich",
-                    finalist: "PSG",
-                }
+                id:1,
+                year:2020,
+                winner: "Bayern Munich",
+                finalist: "PSG",
             },
             {
-                 match: {
-                    year:2019,
-                     winner: "Liverpool",
-                     finalist: "Tottenham Hotspur",
-                }
+                id:2,
+                 year:2019,
+                 winner: "Liverpool",
+                finalist: "Tottenham Hotspur",
              },
             {
-                match: {
-                     year:2018,
-                    winner: "Real Madrid",
-                    finalist: "Liverpool",
-              }
+                id:3,
+                year:2018,
+                winner: "Real Madrid",
+                finalist: "Liverpool",
             },
             {
-                match: {
-                     year:2017,
-                    winner: "Real Madrid",
-                    finalist: "Juventus",
-              }
+                id:4,
+                year:2017,
+                winner: "Real Madrid",
+                finalist: "Juventus",
             },
             {
-                match: {
-                     year:2016,
-                    winner: "Real Madrid",
-                    finalist: "Atletico Madrid",
-                 }
+                id:5,
+                year:2016,
+                winner: "Real Madrid",
+                finalist: "Atletico Madrid",
             },
         ],
     }
-    
+
+    // finals[2015] = {
+    //         winner: "Barselona",
+    //         finalist: "Juventus",
+    //     }
+    // delete finals[2015];
+
+    // const wishes =  {
+    //         2018: {
+    //             winner: "Dynamo Kyiv",
+    //             finalist: "Real Madrid",
+    //         },
+    //     }
+
+    // finals = { ...finals, ...wishes };
+
     render() {
+        const finals = this.state.finals;
+
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Year</th>
-                        <th>Winner</th>
-                        <th>Finalist</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {this.state.finals.map((item) => <TrTable key = {this.state.finals.year} item = {item}></TrTable>)};
-                </tbody>
-            </table>
+            <div className="task-4">
+                <h3>Task 4</h3>
+                <h4>Finals of Champions League</h4>
+                <Task4Table finals={finals} />
+            </div>
         )
     }
 }

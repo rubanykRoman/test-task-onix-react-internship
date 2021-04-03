@@ -2,7 +2,6 @@ import './App.scss';
 import logo from './logo.png';
 import main from './main.png';
 import PropTypes from 'prop-types';
-// import {Task2,Task3,Task4,Task5,Task6,Task7} from './components/';
 import Task2 from './components/task2/Task2';
 import Task3 from './components/task3/Task3';
 import Task4 from './components/task4/Task4';

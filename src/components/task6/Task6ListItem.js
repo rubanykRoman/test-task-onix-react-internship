@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Task6ListItem extends Component {
-    render() {
-        const quoteObj = this.props.quoteObj;
-        return (
-            <li onClick={() => this.props.showAddInfo(quoteObj)}>{quoteObj.quote}</li>
-        )
-    }
+export default function Task6ListItem({quoteObj,showAddInfo}) {
+    return (
+        <li onClick={() => showAddInfo(quoteObj)}>{quoteObj.quote}</li>
+    )
 }

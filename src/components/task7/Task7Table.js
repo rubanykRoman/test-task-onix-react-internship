@@ -1,7 +1,7 @@
 import React from 'react';
-import Task5TableRow from './Task5TableRow';
+import Task7TableRow from './Task7TableRow';
 
-export default function Task5Table({ finals, delItem}) {
+export default function Task7Table({ finals, delItem, isActive}) {
     return (
         <table>
             <thead>
@@ -14,11 +14,12 @@ export default function Task5Table({ finals, delItem}) {
             </thead>
             <tbody>
                 {finals.map((final) =>
-                    <Task5TableRow
+                    <Task7TableRow
                         key={final.id}
                         final={final}
-                        delItem={delItem}>
-                    </Task5TableRow>)}
+                        delItem={delItem}
+                        isActive={isActive}>
+                    </Task7TableRow>)}
             </tbody>
         </table>
     )

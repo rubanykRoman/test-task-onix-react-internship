@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Task4Table from './Task4Table'
-import './Task4.scss'
+import React, { Component } from 'react';
+import Task4Table from './Task4Table';
+import './Task4.scss';
 
 export default class Task4 extends Component {
 
@@ -14,10 +14,10 @@ export default class Task4 extends Component {
             },
             {
                 id:2,
-                 year:2019,
-                 winner: "Liverpool",
+                year:2019,
+                winner: "Liverpool",
                 finalist: "Tottenham Hotspur",
-             },
+            },
             {
                 id:3,
                 year:2018,
@@ -39,23 +39,8 @@ export default class Task4 extends Component {
         ],
     }
 
-    // finals[2015] = {
-    //         winner: "Barselona",
-    //         finalist: "Juventus",
-    //     }
-    // delete finals[2015];
-
-    // const wishes =  {
-    //         2018: {
-    //             winner: "Dynamo Kyiv",
-    //             finalist: "Real Madrid",
-    //         },
-    //     }
-
-    // finals = { ...finals, ...wishes };
-
     render() {
-        const finals = this.state.finals;
+        const { finals } = this.state;
 
         return (
             <div className="task-4">

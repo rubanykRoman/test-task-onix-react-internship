@@ -1,22 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Task5TableRow extends Component {
-
-    onDelBtnClick = (e) => {
-        e.stopPropagation();
-
-        this.props.delItem(this.props.final.id)
+export default function Task5TableRow({ final: { id, year, winner, finalist }, delItem }) {
+    
+    function onDelBtnClick (e) {
+        delItem(id)
     }
 
-    render() {
-        const final = this.props.final;
-        return (
-             <tr>
-                <td>{final.year}</td>
-                <td>{final.winner}</td>
-                <td>{final.finalist}</td>
-                <td><button onClick={this.onDelBtnClick}>del</button></td>
-             </tr>
-        )
-    }
+    return (
+        <tr>
+            <td>{year}</td>
+            <td>{winner}</td>
+            <td>{finalist}</td>
+            <td><button onClick={onDelBtnClick}>del</button></td>
+        </tr>
+    )
 }
+

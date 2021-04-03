@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
-import Task6List from './Task6List'
-import './Task6.scss'
-
+import React, { Component } from 'react';
+import Task6List from './Task6List';
+import './Task6.scss';
 
 export default class Task6 extends Component {
 
@@ -12,7 +11,7 @@ export default class Task6 extends Component {
     showAddInfo (quote) {
         alert(`Author: ${quote.author}, series: "${quote.series}"`)
     }
-   
+
     componentDidMount () {
 
         fetch("https://www.breakingbadapi.com/api/quotes")

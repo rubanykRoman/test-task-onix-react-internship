@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Task3Table from './Task3Tables';
+import './Task3.scss';
 
 export default class Task3 extends Component {
 
@@ -47,38 +49,14 @@ export default class Task3 extends Component {
         const { years, quantity } = this.state;
 
         return (
-            <div className="main__task-3">
+            <div className="task-3">
                 <h3>Task-3</h3>
-                <table rules="3">
-                    <thead>
-                        <tr>
-                            <th onClick={this.withSortFoo}>Year</th>
-                            <th onClick={this.bubbleSort}>Quantity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{years[0]}</td>
-                            <td>{quantity[0]}</td>
-                        </tr>
-                        <tr>
-                            <td>{years[1]}</td>
-                            <td>{quantity[1]}</td>
-                        </tr>
-                        <tr>
-                            <td>{years[2]}</td>
-                            <td>{quantity[2]}</td>
-                        </tr>
-                        <tr>
-                            <td>{years[3]}</td>
-                            <td>{quantity[3]}</td>
-                        </tr>
-                        <tr>
-                            <td>{years[4]}</td>
-                            <td>{quantity[4]}</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <Task3Table
+                    withSortFoo={this.withSortFoo}
+                    bubbleSort={this.bubbleSort}
+                    years={years}
+                    quantity={quantity}>
+                </Task3Table>
                 <button onClick={this.addItem}>ADD</button>
                 <button onClick={this.removeItem}>REMOVE</button>
             </div>

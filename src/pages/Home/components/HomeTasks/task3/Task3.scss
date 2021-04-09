@@ -1,0 +1,17 @@
+.task-3 {
+    text-align: center;
+    .tables {
+        display: flex;
+        justify-content: center;
+    }
+    button {
+        margin-top: 10px;
+        margin-left: 5px;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: #2251ad;
+        text-align: center;
+        vertical-align: middle;
+        color: #ffffff;
+    }
+}

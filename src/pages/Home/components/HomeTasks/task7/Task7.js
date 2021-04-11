@@ -50,8 +50,10 @@ export default class Task7 extends Component {
     }
 
     isActive = (final) => {
+        const { finals } = this.state;
+
         final.flag = !final.flag
-        this.setState({...this.state.finals, final})
+        this.setState(({finals}) => ({...this.state.finals, final}))
     }
 
     handleKeyPress = (event) => {
@@ -71,11 +73,16 @@ export default class Task7 extends Component {
     
     render() {
         const { finals } = this.state;
+        
         return (
             <div tabIndex="1" onKeyPress={this.handleKeyPress} className="task-7">
                 <h3>Task 7</h3>
                 <h4>Finals of Champions League</h4>
-                <Task7Table finals={finals} delItem={this.delItem} isActive={this.isActive}/>
+                <Task7Table
+                    finals={finals}
+                    delItem={this.delItem}
+                    isActive={this.isActive}>
+                </Task7Table>
             </div>
         )
     }

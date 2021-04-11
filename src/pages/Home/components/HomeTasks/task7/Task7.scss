@@ -4,26 +4,22 @@
         text-align: center;
         margin: 5px 0px;
     }
-    table {
-        border: 2px solid grey;
-        th,
-        td {
-            border: 1px solid grey;
-            text-align: center;
-            button {
-                margin-top: 0px;
-                margin-left: 5px;
-                cursor: pointer;
-                border-radius: 20px;
-                background-color: #2251ad;
-                text-align: center;
-                vertical-align: middle;
-                color: #ffffff;
-            }
-        }
-    }
-    th {
+    li {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
         cursor: pointer;
+        margin-top: 5px;
+    }
+    button {
+        margin-top: 0px;
+        margin-left: 10px;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: #2251ad;
+        text-align: center;
+        vertical-align: middle;
+        color: #ffffff;
     }
 }
 

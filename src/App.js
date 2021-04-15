@@ -1,10 +1,11 @@
 import './App.scss';
+import ThemeProvider from './common/contexts/themeContext';
 import Home from './pages/Home/Home';
 
 export default function App() {
   return (
-    <div className="App">
-      <Home></Home>
-    </div>
+    <ThemeProvider>
+      <Home/>
+    </ThemeProvider>
   );
 }

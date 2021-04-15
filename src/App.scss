@@ -20,7 +20,16 @@ html {
     height: 100%;
     max-width: 833px;
     margin: auto;
-    // overflow: hidden;
+    overflow: hidden;
+}
+
+.light {
+    background: #fffcf6;
+}
+
+.dark {
+    background: rgb(46, 46, 45);
+    color: whitesmoke;
 }
 
 .header {
@@ -64,6 +73,20 @@ html {
             font-style: italic;
             transition: 1s;
         }
+    }
+    button {
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+        background-color: aqua;
+        color: black;
+        border-radius: 15px;
+        border: 1px solid grey;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: rgb(137, 235, 235);
+        color: white;
     }
 }
 

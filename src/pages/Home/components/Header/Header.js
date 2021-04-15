@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { themeContext } from '../../../../common/contexts/themeContext';
 import logo from './logo.png';
 
 export default function Header() {
+
+    const {theme, changeTheme} = useContext(themeContext)
+
     return (
         <header className="header">
             <div className="header__logo">
@@ -13,6 +17,7 @@ export default function Header() {
             <div className="nav-item"><a href="#">Donation</a></div>
             <div className="nav-item"><a href="#">Contact</a></div>
             </nav>
+            <button onClick={changeTheme}>Change theme</button>
             <div className="header__autorization"><span>Log in</span></div>
         </header>
     )

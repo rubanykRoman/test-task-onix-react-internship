@@ -1,12 +1,12 @@
 import React from 'react';
 import './HomeTasks.scss';
-import Task2 from './task2/Task2';
-import Task3 from './task3/Task3';
-import Task4 from './task4/Task4';
-import Task5 from './task5/Task5';
-import Task6 from './task6/Task6';
-import Task7 from './task7/Task7';
-import Task9 from './task9/Task9';
+import Task2 from './HomeTasks/task2/Task2';
+import Task3 from './HomeTasks/task3/Task3';
+import Task4 from './HomeTasks/task4/Task4';
+import Task5 from './HomeTasks/task5/Task5';
+import Task6 from './HomeTasks/task6/Task6';
+import Task7 from './HomeTasks/task7/Task7';
+import Task9 from './HomeTasks/task9/Task9';
 
 export default function HomeTasks() {
     return (

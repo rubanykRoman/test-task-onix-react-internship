@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { themeContext } from '../../../../common/contexts/themeContext';
-import logo from './logo.png';
+import { themeContext } from '../../../contexts/themeContext';
+import logo from '../assets/logo.png';
 
 export default function Header() {
 

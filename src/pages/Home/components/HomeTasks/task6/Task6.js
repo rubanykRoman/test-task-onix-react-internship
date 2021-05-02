@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Task6List from './Task6List';
 import './Task6.scss';
-import Loading from '../../../../../components/Loading';
-import NotFound from '../../../../../components/NotFound';
+import Loading from '../../../../../components/Loading/Loading'
+import NotFound from '../../../../../components/NotFound/NotFound';
 
 export default class Task6 extends Component {
 

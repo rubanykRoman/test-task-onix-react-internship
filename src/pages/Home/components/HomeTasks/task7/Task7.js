@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Task7Table from './Task7Table';
+import Task7List from './Task7List';
 import './Task7.scss';
 
 export default class Task7 extends Component {
@@ -10,65 +10,77 @@ export default class Task7 extends Component {
                 year: 2020,
                 winner: "Bayern Munich",
                 finalist: "PSG",
-                flag: false,
+                flagActive: false,
+                flagSelected: false,
             },
             {
                 id: 2,
                 year: 2019,
                 winner: "Liverpool",
                 finalist: "Tottenham Hotspur",
-                flag: false,
+                flagActive: false,
+                flagSelected: false,
             },
             {
                 id: 3,
                 year: 2018,
                 winner: "Real Madrid",
                 finalist: "Liverpool",
-                flag: false,
+                flagActive: false,
+                flagSelected: false,
             },
             {
                 id: 4,
                 year: 2017,
                 winner: "Real Madrid",
                 finalist: "Juventus",
-                flag: false,
+                flagActive: false,
+                flagSelected: false,
             },
             {
                 id: 5,
                 year: 2016,
                 winner: "Real Madrid",
                 finalist: "Atletico Madrid",
-                flag: false,
+                flagActive: false,
+                flagSelected: false,
             },
         ],
     }
 
     delItem = (id) => {
-    this.setState({
-            finals: this.state.finals.filter((item) => item.id !== id),
-        });
+        this.setState({ finals: this.state.finals.filter((item) => item.id !== id) });
     }
 
-    isActive = (final) => {
+    flagToggle = (id, e) => {
         const { finals } = this.state;
+        const item = finals.find((l) => l.id === id);
+        let newItem;
 
-        final.flag = !final.flag
-        this.setState(({finals}) => ({...this.state.finals, final}))
+        if (e.type === 'click' || e.type === 'keypress') {
+            newItem = { ...item, flagActive: !item.flagActive};
+        }
+
+        if (e.type === 'dragstart' || e.type === 'dragend' ) {
+            newItem = { ...item, flagSelected: !item.flagSelected};
+        }
+    
+        this.setState({ finals: finals.map((item) => item.id !== id ? item : newItem) })
     }
 
-    handleKeyPress = (event) => {
+    handleKeyPress = (e) => {
         const { finals } = this.state;
+        const key = e.key;
 
-        if(event.key == '1'){
-            finals[0].flag = !finals[0].flag;
-            }
-        if(event.key == '2'){
-            finals[1].flag = !finals[1].flag;
-            }
-        if(event.key == '3'){
-            finals[2].flag = !finals[2].flag;
-            }
-        this.setState({...this.state.finals})       
+        const targetFinal = finals[key - 1];
+        const keys = [1,2,3,4,5,6,7,8,9]
+
+        for (let i = 0; i < keys.length && i < finals.length; i++){
+            if (key == keys[i]){
+                this.flagToggle(targetFinal.id, e)
+                break;
+            }   
+        }
     }
     
     render() {
@@ -78,11 +90,11 @@ export default class Task7 extends Component {
             <div tabIndex="1" onKeyPress={this.handleKeyPress} className="task-7">
                 <h3>Task 7</h3>
                 <h4>Finals of Champions League</h4>
-                <Task7Table
+                <Task7List
                     finals={finals}
                     delItem={this.delItem}
-                    isActive={this.isActive}>
-                </Task7Table>
+                    flagToggle={this.flagToggle}>
+                </Task7List>
             </div>
         )
     }

@@ -11,8 +11,8 @@ import Task9 from './HomeTasks/task9/Task9';
 export default function HomeTasks() {
     return (
         <div className="home-tasks">
-        <Task9></Task9>
-        {/* <Task7></Task7> */}
+        {/* <Task9></Task9> */}
+        <Task7></Task7>
         {/* <Task6></Task6> */}
         {/* <Task5></Task5> */}
         {/* <Task4></Task4> */}

@@ -1,27 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task7TableRow({ final,
-                                        final: { id, year, winner, finalist, flag },
+export default function Task7ListItem({ final: { id, year, winner, finalist, flagActive, flagSelected  },
                                         delItem,
-                                        isActive }) {
+                                        flagToggle
+                                        }) {
     
     function onDelBtnClick(e) {
         e.stopPropagation();
 
         delItem(id)
-    }
-
-    function onLiClick() {
-        isActive(final)
-    }
-
-    function onRawDragStart(e) {
-        e.target.classList.add(`selected`);
-    }
-
-    function onRawDragEnd(e) {
-        e.target.classList.remove(`selected`);
     }
 
     function onRawDragOver(e) {
@@ -45,11 +33,14 @@ export default function Task7TableRow({ final,
 
     return (
         <li
-            onClick={onLiClick}
-            className={`${flag === true ? "active" : "not-active"} + finals-list-item`}
+            onClick={(e)=>flagToggle(id,e)}
+            className={`${flagActive === true ? "active" : "not-active"} 
+                        ${flagSelected === true ? "selected" : "not-selected"} 
+                        finals-list-item`
+                    }
             draggable="true"
-            onDragStart={onRawDragStart}
-            onDragEnd={onRawDragEnd}
+            onDragStart={(e)=>flagToggle(id,e)}
+            onDragEnd={(e)=>flagToggle(id,e)}
             onDragOver={onRawDragOver}>
                 {`${year} `}   
                 {`${winner} `}  
@@ -59,9 +50,9 @@ export default function Task7TableRow({ final,
     )
 }
 
-Task7TableRow.propTypes = {
+Task7ListItem.propTypes = {
     final: PropTypes.object,
     delItem: PropTypes.func,
-    isActive: PropTypes.func,
+    flagToggle: PropTypes.func,
 }
 

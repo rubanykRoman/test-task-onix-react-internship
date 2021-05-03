@@ -65,7 +65,7 @@ export default class Task7 extends Component {
             newItem = { ...item, flagSelected: !item.flagSelected};
         }
     
-        this.setState({ finals: finals.map((item) => item.id !== id ? item : newItem) })
+        this.setState( ({finals}) => ({ finals: finals.map((item) => item.id !== id ? item : newItem)}) )
     }
 
     handleKeyPress = (e) => {

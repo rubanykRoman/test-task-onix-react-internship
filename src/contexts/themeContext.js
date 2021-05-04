@@ -1,12 +1,13 @@
-import { createContext,useState,useCallback,useMemo } from 'react';
+import { createContext, useState, useCallback, useMemo } from 'react';
+import { themes } from '../constants/theme'
 
-export const themeContext = createContext('light');
+export const themeContext = createContext(themes.light);
 
 export default function ThemeProvider({ children }) {
-    const [theme, setTheme] = useState('light')
+    const [theme, setTheme] = useState(themes.light)
 
     const changeTheme = useCallback(() => {
-        setTheme(theme === 'light' ? 'dark' : 'light')
+        setTheme(theme === themes.light ? themes.dark : themes.light)
     }, [theme]);
 
     const contextValue = useMemo(
@@ -19,7 +20,7 @@ export default function ThemeProvider({ children }) {
 
     return (
         <themeContext.Provider value={contextValue}>
-            <div className={theme}>
+            <div style={theme}>
                 {children}
             </div>
         </themeContext.Provider>

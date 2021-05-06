@@ -1,8 +1,8 @@
-import React from 'react'
-import Footer from './Footer'
-import Header from './Header'
-import HomeTasks from './HomeTasks'
-import Main from './Main'
+import React from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import HomeTasks from './HomeTasks/HomeTasks';
+import Main from './Main';
 
 export default function Home() {
     return (

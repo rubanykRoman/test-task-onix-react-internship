@@ -8,8 +8,8 @@ function VipUsersList({ list, remove }) {
             <h3>VIP Clients</h3>
             <ol>
                 {list.map((item) =>
-                    <div className='user-info'>
-                        <li key={item.id}>{item.name}<br />{item.phone}</li>
+                    <div key={item.id} className='user-info'>
+                        <li>{item.name}<br />{item.phone}</li>
                         <button onClick={() => remove(item.id)}>del</button>
                     </div>
                 )}

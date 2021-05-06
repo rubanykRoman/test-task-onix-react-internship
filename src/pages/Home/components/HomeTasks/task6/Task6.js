@@ -1,44 +1,38 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Task6List from './Task6List';
 import './Task6.scss';
-import Loading from '../../../../../components/Loading/Loading'
+import Loading from '../../../../../components/Loading/Loading';
 import NotFound from '../../../../../components/NotFound/NotFound';
 
-export default class Task6 extends Component {
+export default function Task6() {
 
-    state = {
-        quotes: [],
-        isLoading: false,
-        error: null,
-    }
-    
-    showAddInfo (quote) {
+    const [quotes, setQuotes] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState(null)
+
+    function showAddInfo(quote) {
         alert(`Author: ${quote.author}, series: "${quote.series}"`)
     }
 
-    componentDidMount() {
-        
-        this.setState({ isLoading: true });
-        this.setState({ error: null });
+    useEffect(() => {
+        setIsLoading(true);
+        setError(null);
 
         fetch("https://www.breakingbadapi.com/api/quotes")
             .then((response) => {
                 return response.json();
             })
-            .then((data) => { this.setState({ quotes: data }) })
-            .catch((err) => this.setState({ error: err }))
-            .finally(() => this.setState({ isLoading: false }))
-    }
-
-    render() {
-        const { quotes, isLoading, error } = this.state;
-        return (
-            <div className="task-6">
-                <h3>Task-6</h3>
-                <h4>Breaking Bad ©</h4>
-                {isLoading ? <Loading /> : <Task6List quotes={quotes} showAddInfo={this.showAddInfo} />}
-                {error? <NotFound /> : null }
-            </div>
-        )
-    }
+            .then((data) =>  setQuotes(data) )
+            .catch((err) => setError(err))
+            .finally(() => setIsLoading(false))
+    }, [])
+    
+    return (
+        <div className="task-6">
+            <h3>Task-6</h3>
+            <h4>Breaking Bad ©</h4>
+            {isLoading ? <Loading /> : <Task6List quotes={quotes} showAddInfo={showAddInfo} />}
+            {error? <NotFound /> : null }
+        </div>
+    )
 }

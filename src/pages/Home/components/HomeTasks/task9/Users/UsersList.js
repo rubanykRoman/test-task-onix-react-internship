@@ -9,8 +9,8 @@ function UsersList({ list, remove }) {
             <h3>Clients</h3>
             <ol>
                 {list.map((item) =>
-                    <div className='user-info'>
-                        <li onClick={() => remove(item.id)} key={item.id}>{item.name} <br /> {item.email}</li>
+                    <div key={item.id} className='user-info'>
+                        <li onClick={() => remove(item.id)}>{item.name} <br /> {item.email}</li>
                         <button onClick={() => remove(item.id)}>del</button>
                     </div>
                 )}

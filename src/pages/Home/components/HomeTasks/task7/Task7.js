@@ -1,59 +1,57 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Task7List from './Task7List';
 import './Task7.scss';
 
-export default class Task7 extends Component {
-    state = {
-        finals: [
-            {
-                id: 1,
-                year: 2020,
-                winner: "Bayern Munich",
-                finalist: "PSG",
-                flagActive: false,
-                flagSelected: false,
-            },
-            {
-                id: 2,
-                year: 2019,
-                winner: "Liverpool",
-                finalist: "Tottenham Hotspur",
-                flagActive: false,
-                flagSelected: false,
-            },
-            {
-                id: 3,
-                year: 2018,
-                winner: "Real Madrid",
-                finalist: "Liverpool",
-                flagActive: false,
-                flagSelected: false,
-            },
-            {
-                id: 4,
-                year: 2017,
-                winner: "Real Madrid",
-                finalist: "Juventus",
-                flagActive: false,
-                flagSelected: false,
-            },
-            {
-                id: 5,
-                year: 2016,
-                winner: "Real Madrid",
-                finalist: "Atletico Madrid",
-                flagActive: false,
-                flagSelected: false,
-            },
-        ],
+export default function Task7() {
+
+    const [finals, setFinals] = useState([
+        {
+            id: 1,
+            year: 2020,
+            winner: "Bayern Munich",
+            finalist: "PSG",
+            flagActive: false,
+            flagSelected: false,
+        },
+        {
+            id: 2,
+            year: 2019,
+            winner: "Liverpool",
+            finalist: "Tottenham Hotspur",
+            flagActive: false,
+            flagSelected: false,
+        },
+        {
+            id: 3,
+            year: 2018,
+            winner: "Real Madrid",
+            finalist: "Liverpool",
+            flagActive: false,
+            flagSelected: false,
+        },
+        {
+            id: 4,
+            year: 2017,
+            winner: "Real Madrid",
+            finalist: "Juventus",
+            flagActive: false,
+            flagSelected: false,
+        },
+        {
+            id: 5,
+            year: 2016,
+            winner: "Real Madrid",
+            finalist: "Atletico Madrid",
+            flagActive: false,
+            flagSelected: false,
+        },
+    ]);
+
+    function delItem(id) {
+        setFinals(finals.filter((item) => item.id !== id));
     }
 
-    delItem = (id) => {
-        this.setState({ finals: this.state.finals.filter((item) => item.id !== id) });
-    }
-
-    flagToggle = (id, e) => {
-        const { finals } = this.state;
+    function flagToggle(id, e) {
         const item = finals.find((l) => l.id === id);
         let newItem;
 
@@ -65,11 +63,10 @@ export default class Task7 extends Component {
             newItem = { ...item, flagSelected: !item.flagSelected};
         }
     
-        this.setState( ({finals}) => ({ finals: finals.map((item) => item.id !== id ? item : newItem)}) )
+        setFinals( (finals) => (finals.map((item) => item.id !== id ? item : newItem)) )
     }
 
-    handleKeyPress = (e) => {
-        const { finals } = this.state;
+    function handleKeyPress(e) {
         const key = e.key;
 
         const targetFinal = finals[key - 1];
@@ -77,25 +74,21 @@ export default class Task7 extends Component {
 
         for (let i = 0; i < keys.length && i < finals.length; i++){
             if (key == keys[i]){
-                this.flagToggle(targetFinal.id, e)
+                flagToggle(targetFinal.id, e)
                 break;
             }   
         }
     }
-    
-    render() {
-        const { finals } = this.state;
-        
-        return (
-            <div tabIndex="1" onKeyPress={this.handleKeyPress} className="task-7">
-                <h3>Task 7</h3>
-                <h4>Finals of Champions League</h4>
-                <Task7List
-                    finals={finals}
-                    delItem={this.delItem}
-                    flagToggle={this.flagToggle}>
-                </Task7List>
-            </div>
-        )
-    }
+
+    return (
+        <div tabIndex="1" onKeyPress={handleKeyPress} className="task-7">
+            <h3>Task 7</h3>
+            <h4>Finals of Champions League</h4>
+            <Task7List
+                finals={finals}
+                delItem={delItem}
+                flagToggle={flagToggle}>
+            </Task7List>
+        </div>
+    )
 }

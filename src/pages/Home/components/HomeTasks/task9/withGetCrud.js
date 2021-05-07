@@ -8,7 +8,7 @@ function withGetCrud(Component, api) {
         const [list, setList] = useState([])
 
         useEffect(() => {
-            api.get().then(({ data }) => setList(data));
+            api.get().then(({ data }) => setList(data))
         }, [api]);
 
         function deleteItem(id) {

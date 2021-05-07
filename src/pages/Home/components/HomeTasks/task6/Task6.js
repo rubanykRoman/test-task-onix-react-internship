@@ -32,7 +32,7 @@ export default function Task6() {
             <h3>Task-6</h3>
             <h4>Breaking Bad ©</h4>
             {isLoading ? <Loading /> : <Task6List quotes={quotes} showAddInfo={showAddInfo} />}
-            {error? <NotFound /> : null }
+            {error ? <NotFound /> : null }
         </div>
     )
 }

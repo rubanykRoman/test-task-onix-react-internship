@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 function withGetCrud(Component, api) {
     
     function WithGetCrud() {
-
+    
         const [list, setList] = useState([])
+        const [isLoading, setIsLoading] = useState(true);
+        const [error, setError] = useState(null)
 
         useEffect(() => {
             api.get().then(({ data }) => setList(data))
+            .catch((err) => setError(err))
+            .finally(() => setIsLoading(false))
         }, [api]);
 
         function deleteItem(id) {
@@ -38,7 +41,10 @@ function withGetCrud(Component, api) {
             list={list}
             create={createItem}
             update={updateItem}
-            remove={deleteItem} />
+            remove={deleteItem}
+            isLoading={isLoading}
+            error={error}
+            />
     }
 
     return WithGetCrud

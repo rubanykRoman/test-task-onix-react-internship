@@ -1,0 +1,44 @@
+h3 {
+    text-align: center;
+    color: blue;
+    margin-bottom: 5px;
+}
+
+.task-14 {
+    display: flex;
+    justify-content: center;
+    h3 {
+        text-align: center;
+        color: blue;
+        margin-bottom: 20px;
+    }
+    div {
+        margin-left: 20px;
+    }
+    .user-info {
+        margin-bottom: 20px;
+    }
+    button {
+        background-color: rgb(236, 60, 60);
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.updButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    background-color: aqua;
+    color: grey;
+    cursor: pointer;
+}
+
+.updButton:hover {
+    color: white;
+    background-color: aquamarine;
+}

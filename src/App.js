@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.scss';
 import ThemeProvider from './contexts/themeContext';
 import Home from './pages/Home/components/Home';
@@ -5,7 +6,7 @@ import Home from './pages/Home/components/Home';
 export default function App() {
   return (
     <ThemeProvider>
-      <Home/>
+      <Home />
     </ThemeProvider>
   );
 }

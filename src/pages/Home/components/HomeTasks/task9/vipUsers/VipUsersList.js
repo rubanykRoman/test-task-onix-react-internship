@@ -1,5 +1,5 @@
 import React from 'react';
-import withGetCrud from '../withGetCrud';
+import withGetCrud from '../../../../../../hoc/withGetCrud'
 import vipUsersApi from './vipUsersApi';
 import Loading from '../../../../../../components/Loading/Loading';
 import NotFound from '../../../../../../components/NotFound/NotFound';

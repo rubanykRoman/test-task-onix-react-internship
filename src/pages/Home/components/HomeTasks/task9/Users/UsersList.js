@@ -1,8 +1,8 @@
 import React from 'react';
 import Loading from '../../../../../../components/Loading/Loading';
 import NotFound from '../../../../../../components/NotFound/NotFound';
-import withGetCrud from '../withGetCrud';
 import usersApi from './usersApi';
+import withGetCrud from '../../../../../../hoc/withGetCrud'
 
 
 function UsersList({ list, remove, isLoading, error }) {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-function withGetCrud(Component, api) {
+const withGetCrud = (Component, api) => {
     
-    function WithGetCrud() {
+    const WithGetCrud = () => {
     
         const [list, setList] = useState([])
         const [isLoading, setIsLoading] = useState(true);
@@ -14,20 +14,20 @@ function withGetCrud(Component, api) {
             .finally(() => setIsLoading(false))
         }, [api]);
 
-        function deleteItem(id) {
+        const deleteItem = (id) => {
             api.delete(id);
 
             setList(list.filter((item) => item.id !== id));
         }
 
-        function createItem(newItem) {
+        const createItem = (newItem) => {
         
             api.post('', newItem).then(({ data }) =>
                 setList((list) => [...list, data])
             );
         }
 
-        function updateItem(updItem) {
+        const updateItem = (updItem) => {
             const item = list.find((l) => l.id === updItem.id);
             const newItem = { ...item, name: updItem.name, phone: updItem.phone, email: updItem.email };
 

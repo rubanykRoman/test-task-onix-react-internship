@@ -6,7 +6,7 @@ import './Task14.scss';
 import Loading from '../../../../../components/Loading/Loading';
 import TaskCard from '../../../../../components/TaskCard';
 
-function Task14({ contacts, getContacts, deleteContact, isLoading, isLoadingToggle }) {
+const Task14 = ({ contacts, getContacts, deleteContact, isLoading, isLoadingToggle }) => {
     
     useEffect(() => {
         getContacts();

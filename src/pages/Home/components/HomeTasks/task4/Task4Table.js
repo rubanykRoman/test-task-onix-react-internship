@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Task4TableRow from './Task4TableRow';
 
-export default function Task4Table({finals}) {
+const Task4Table = ({finals}) => {
     return (
         <table>
             <thead>
@@ -22,3 +22,5 @@ export default function Task4Table({finals}) {
 Task4Table.propTypes = {
     finals: PropTypes.array,
 }
+
+export default Task4Table;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task3Row({item}) {
+const Task3Row = ({item}) => {
     return (
         <tr>
             <td>
@@ -16,3 +16,5 @@ Task3Row.propTypes = {
         PropTypes.string,
         PropTypes.number]),
 }
+
+export default Task3Row;

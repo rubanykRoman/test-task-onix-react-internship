@@ -3,7 +3,7 @@ import Task7List from './Task7List';
 import './Task7.scss';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task7() {
+const Task7 = () => {
 
     const [finals, setFinals] = useState([
         {
@@ -48,11 +48,11 @@ export default function Task7() {
         },
     ]);
 
-    function delItem(id) {
+    const delItem = (id) => {
         setFinals(finals.filter((item) => item.id !== id));
     }
 
-    function flagToggle(id, e) {
+    const flagToggle = (id, e) => {
         const item = finals.find((l) => l.id === id);
         let newItem;
 
@@ -67,7 +67,7 @@ export default function Task7() {
         setFinals( (finals) => (finals.map((item) => item.id !== id ? item : newItem)) )
     }
 
-    function handleKeyPress(e) {
+    const handleKeyPress = (e) => {
         const key = e.key;
 
         const targetFinal = finals[key - 1];
@@ -95,3 +95,5 @@ export default function Task7() {
         </div>
     )
 }
+
+export default Task7;

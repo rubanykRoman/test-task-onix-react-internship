@@ -1,7 +1,7 @@
 import React from 'react';
 import './NotFound.scss';
 
-export default function Error() {
+const Error = () => {
     return (
         <div className="not-found">
             <h1>Not found</h1>
@@ -11,3 +11,5 @@ export default function Error() {
         </div>
     )
 }
+
+export default Error;

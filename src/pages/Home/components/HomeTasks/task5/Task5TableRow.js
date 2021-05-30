@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task5TableRow({ final: { id, year, winner, finalist }, delItem }) {
+const Task5TableRow = ({ final: { id, year, winner, finalist }, delItem }) => {
     
-    function onDelBtnClick (e) {
-        delItem(id)
+    const onDelBtnClick = (e) => {
+        delItem(id);
     }
 
     return (
@@ -21,3 +21,5 @@ Task5TableRow.propTypes = {
     final: PropTypes.object,
     delItem: PropTypes.func,
 }
+
+export default Task5TableRow;

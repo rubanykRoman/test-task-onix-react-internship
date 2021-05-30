@@ -4,7 +4,7 @@ import Task2MemberList from './Task2MemberList';
 import './Task2.scss';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task2() {
+const Task2 = () => {
 
     const [names, setNames] = useState(["Stefani Germanotta", "Peter Parker", "Elon Musk", "James Howlett", "Bruce wayne"]);
     const [countriesMembers, setCountriesMembers] = useState([
@@ -22,3 +22,5 @@ export default function Task2() {
         </div>
     )
 }
+
+export default Task2;

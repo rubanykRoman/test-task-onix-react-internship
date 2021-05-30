@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function UsersList({ contacts, deleteContact}) {
+const UsersList = ({ contacts, deleteContact}) => {
     return (
         <div>
             <h3>Contacts</h3>
@@ -16,3 +16,5 @@ export default function UsersList({ contacts, deleteContact}) {
         </div>
     )
 }
+
+export default UsersList;

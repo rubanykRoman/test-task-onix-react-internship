@@ -5,13 +5,13 @@ import Loading from '../../../../../components/Loading/Loading';
 import NotFound from '../../../../../components/NotFound/NotFound';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task6() {
+const Task6 = () => {
 
     const [quotes, setQuotes] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null)
 
-    function showAddInfo(quote) {
+    const showAddInfo = (quote) => {
         alert(`Author: ${quote.author}, series: "${quote.series}"`)
     }
 
@@ -39,3 +39,5 @@ export default function Task6() {
         </div>
     )
 }
+
+export default Task6;

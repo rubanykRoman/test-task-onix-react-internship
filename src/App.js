@@ -3,10 +3,12 @@ import './App.scss';
 import ThemeProvider from './contexts/themeContext';
 import Home from './pages/Home/components/Home';
 
-export default function App() {
+const App = () => {
   return (
     <ThemeProvider>
       <Home />
     </ThemeProvider>
   );
 }
+
+export default App;

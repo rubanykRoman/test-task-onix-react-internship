@@ -3,7 +3,7 @@ import { themes } from '../constants/theme'
 
 export const themeContext = createContext(themes.light);
 
-export default function ThemeProvider({ children }) {
+const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(themes.light)
 
     const changeTheme = useCallback(() => {
@@ -26,3 +26,5 @@ export default function ThemeProvider({ children }) {
         </themeContext.Provider>
     );
 }
+
+export default ThemeProvider;

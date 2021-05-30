@@ -4,7 +4,7 @@ import Header from './Header';
 import HomeTasks from './HomeTasks/HomeTasks';
 import Main from './Main';
 
-export default function Home() {
+const Home = () => {
     return (
         <div>
             <Header></Header>
@@ -14,3 +14,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home;

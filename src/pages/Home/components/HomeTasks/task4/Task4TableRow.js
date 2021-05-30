@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task4TableRow({final: {year, winner, finalist}}) {
+const Task4TableRow = ({final: {year, winner, finalist}}) => {
     return (
         <tr>
             {<td>{year}</td>}
@@ -14,3 +14,5 @@ export default function Task4TableRow({final: {year, winner, finalist}}) {
 Task4TableRow.propTypes = {
     final: PropTypes.object,
 }
+
+export default Task4TableRow;

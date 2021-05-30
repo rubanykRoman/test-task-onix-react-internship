@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Task2CountriesItem from './Task2CountriesRow';
 
-export default function Task2CountriesTable({countriesMembers}) {
+const Task2CountriesTable = ({countriesMembers}) => {
     return (
         <div className="most-popular-countries">
             <table className="countries" cellPadding="3">
@@ -25,3 +25,5 @@ export default function Task2CountriesTable({countriesMembers}) {
 Task2CountriesTable.propTypes = {
     countriesMembers: PropTypes.array,
 }
+
+export default Task2CountriesTable;

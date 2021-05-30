@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Task5TableRow from './Task5TableRow';
 
 
-export default function Task5Table({ finals, delItem}) {
+const Task5Table = ({ finals, delItem}) => {
     return (
         <table>
             <thead>
@@ -30,3 +30,5 @@ Task5Table.propTypes = {
     finals: PropTypes.array,
     delItem: PropTypes.func,
 }
+
+export default Task5Table;

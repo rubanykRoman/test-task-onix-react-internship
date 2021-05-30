@@ -5,7 +5,7 @@ import usersApi from './usersApi';
 import withGetCrud from '../../../../../../hoc/withGetCrud'
 
 
-function UsersList({ list, remove, isLoading, error }) {
+const UsersList = ({ list, remove, isLoading, error }) => {
     return (
         <>
             { isLoading ? <Loading /> :

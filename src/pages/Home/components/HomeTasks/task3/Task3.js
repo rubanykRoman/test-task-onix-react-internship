@@ -3,17 +3,17 @@ import Task3Table from './Task3Tables';
 import './Task3.scss';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task3() {
+const Task3 = () => {
 
     const [years, setYears] = useState(["2017", "2020", "2019", "2018", "2021"])
     const [quantity, setQuantity] = useState([20456, 25876, 24200, 23263, 51004])
 
-    function withSortFoo() {
+    const withSortFoo = () => {
         years.sort((a, b) => a - b);
         console.log(years)
     };
 
-    function bubbleSort() {
+    const bubbleSort = () => {
         for (let i = 0; i < quantity.length-1; i++) {
             let flagSwap = false;
             for (let j = 0; j < quantity.length - 1 - i; j++) {
@@ -27,12 +27,12 @@ export default function Task3() {
         console.log(quantity);
     };
 
-    function addItem() {
+    const addItem = () => {
         years.push("new item");
         console.log(years);
     };
 
-    function removeItem() {
+    const removeItem = () => {
         years.pop();
         console.log(years);
     };
@@ -52,3 +52,5 @@ export default function Task3() {
         </div>
     )
 }
+
+export default Task3;

@@ -9,7 +9,7 @@ const initialState = {
     isLoading: false,
 };
 
-export default function task14reducer(state = initialState, { type, payload }) {
+const task14reducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case CONTACTS_GET_CONTACTS:
             return { ...state, contacts: payload };
@@ -27,3 +27,5 @@ export default function task14reducer(state = initialState, { type, payload }) {
             return state;
     }
 }
+
+export default task14reducer;

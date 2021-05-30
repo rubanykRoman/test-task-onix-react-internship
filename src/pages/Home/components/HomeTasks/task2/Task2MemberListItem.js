@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task2MemberListItem({ name }) {
+const Task2MemberListItem = ({ name }) => {
     return (
         <li>
             {name}
@@ -12,3 +12,5 @@ export default function Task2MemberListItem({ name }) {
 Task2MemberListItem.propTypes = {
     name: PropTypes.string,
 }
+
+export default Task2MemberListItem;

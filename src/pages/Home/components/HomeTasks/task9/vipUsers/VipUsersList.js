@@ -4,7 +4,7 @@ import vipUsersApi from './vipUsersApi';
 import Loading from '../../../../../../components/Loading/Loading';
 import NotFound from '../../../../../../components/NotFound/NotFound';
 
-function VipUsersList({ list, remove, isLoading, error }) {
+const VipUsersList = ({ list, remove, isLoading, error }) => {
     return (
         <>
             { isLoading ? <Loading /> :

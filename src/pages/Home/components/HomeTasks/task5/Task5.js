@@ -3,7 +3,7 @@ import Task5Table from './Task5Table';
 import './Task5.scss';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task5() {
+const Task5 = () => {
 
     const [finals, setFinals] = useState([
         {
@@ -38,7 +38,7 @@ export default function Task5() {
         },
     ]);
 
-    function  delItem(id) {
+    const delItem = (id) => {
         setFinals(
             finals.filter((item) => item.id !== id)
         );
@@ -54,3 +54,5 @@ export default function Task5() {
         </div>
     )
 }
+
+export default Task5;

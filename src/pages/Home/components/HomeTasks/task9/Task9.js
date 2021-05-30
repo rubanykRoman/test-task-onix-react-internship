@@ -4,7 +4,7 @@ import UsersList from './Users/UsersList';
 import './Task9.scss';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task9() {
+const Task9 = () => {
     return (
         <>
             <TaskCard
@@ -17,3 +17,5 @@ export default function Task9() {
         </>
     )
 }
+
+export default Task9;

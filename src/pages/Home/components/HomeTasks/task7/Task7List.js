@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Task7ListItem from './Task7ListItem';
 
-export default function Task7List({ finals, delItem, flagToggle}) {
+const Task7List = ({ finals, delItem, flagToggle}) => {
     return (
         <ul className="finals-list">
             {finals.map((final) =>
@@ -21,3 +21,5 @@ Task7List.propTypes = {
     delItem: PropTypes.func,
     flagToggle: PropTypes.func,
 }
+
+export default Task7List;

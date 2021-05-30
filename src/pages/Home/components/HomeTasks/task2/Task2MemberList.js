@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Task2MemberListItem from './Task2MemberListItem';
 
-export default function Task2MemberList({names}) {
+const Task2MemberList = ({names}) => {
     return (
         <div className="new-members">
             <h4>Last New members:</h4>
@@ -21,3 +21,5 @@ export default function Task2MemberList({names}) {
 Task2MemberList.propTypes = {
     names: PropTypes.array,
 }
+
+export default Task2MemberList;

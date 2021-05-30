@@ -3,7 +3,7 @@ import Task4Table from './Task4Table';
 import './Task4.scss';
 import TaskCard from '../../../../../components/TaskCard';
 
-export default function Task4() {
+const Task4 = () => {
 
     const [finals, setFinals] = useState([
         {
@@ -48,3 +48,5 @@ export default function Task4() {
         </div>
     )
 }
+
+export default Task4;

@@ -1,7 +1,7 @@
 import React from 'react';
 import main from '../../../assets/main.png';
 
-export default function Main() {
+const Main = () => {
     return (
         <main>
             <div className="main">
@@ -17,3 +17,5 @@ export default function Main() {
         </main>
     )
 }
+
+export default Main;

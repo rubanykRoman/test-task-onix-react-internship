@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { themeContext } from '../../../contexts/themeContext';
 import logo from '../../../assets/logo.png';
 
-export default function Header() {
+const Header = () => {
 
     const {theme, changeTheme} = useContext(themeContext)
 
@@ -22,3 +22,5 @@ export default function Header() {
         </header>
     )
 }
+
+export default Header;

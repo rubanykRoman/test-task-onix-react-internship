@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task7ListItem({ final: { id, year, winner, finalist, flagActive, flagSelected  },
-                                        delItem,
-                                        flagToggle
-                                        }) {
+const Task7ListItem = ({ final: {
+    id, year, winner, finalist, flagActive, flagSelected },
+    delItem,
+    flagToggle}) => {
     
-    function onDelBtnClick(e) {
+    const onDelBtnClick = (e) => {
         e.stopPropagation();
 
         delItem(id)
     }
 
-    function onRawDragOver(e) {
+    const onRawDragOver = (e) => {
         e.preventDefault();
 
         const ListElement = document.querySelector(".finals-list");
@@ -56,3 +56,4 @@ Task7ListItem.propTypes = {
     flagToggle: PropTypes.func,
 }
 
+export default Task7ListItem;

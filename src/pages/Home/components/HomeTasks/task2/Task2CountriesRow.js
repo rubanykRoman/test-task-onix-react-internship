@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Task2CountriesRow({member:{country, quantity}}) {
+const Task2CountriesRow = ({member:{country, quantity}})  => {
     return (
         <tr>
             <td>{country}</td>
@@ -13,3 +13,5 @@ export default function Task2CountriesRow({member:{country, quantity}}) {
 Task2CountriesRow.propTypes = {
     member: PropTypes.object,
 }
+
+export default Task2CountriesRow;

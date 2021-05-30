@@ -20,6 +20,6 @@ export const deleteContact = (payload) => async (dispatch) => {
 };
 
 export const CONTACTS_ISLOADING_TOGGLE = 'CONTACTS_ISLOADING_TOGGLE';
-export function isLoadingToggle() {
+export const isLoadingToggle = () => {
     return { type: CONTACTS_ISLOADING_TOGGLE};
 }

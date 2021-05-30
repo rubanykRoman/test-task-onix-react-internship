@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Task3Row from './Task3Row';
 
-export default function Task3Tables({ withSortFoo, bubbleSort, years, quantity }) {
+const Task3Tables = ({ withSortFoo, bubbleSort, years, quantity }) => {
     return (
         <div className="tables">
             <table rules="3">
@@ -39,3 +39,5 @@ Task3Tables.propTypes = {
     years: PropTypes.array,
     quantity: PropTypes.array,
 }
+
+export default Task3Tables;

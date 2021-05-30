@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TaskCard({ taskNumber, taskTitle }) {
+const TaskCard = ({ taskNumber, taskTitle }) => {
     return (
         <div>
             <h3>{`Task - ${taskNumber}`}</h3>
@@ -8,3 +8,5 @@ export default function TaskCard({ taskNumber, taskTitle }) {
         </div>
     )
 }
+
+export default TaskCard 

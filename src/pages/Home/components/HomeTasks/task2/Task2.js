@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Task2CountriesList from './Task2CountriesTable';
 import Task2MemberList from './Task2MemberList';
 import './Task2.scss';
+import TaskCard from '../../../../../components/TaskCard';
 
 export default function Task2() {
 
@@ -15,8 +16,9 @@ export default function Task2() {
 
     return (
         <div className="task-2">
-                <Task2MemberList names={names}></Task2MemberList>
-                <Task2CountriesList countriesMembers={countriesMembers}></Task2CountriesList>
+            <TaskCard taskNumber="2"/>
+            <Task2MemberList names={names}></Task2MemberList>
+            <Task2CountriesList countriesMembers={countriesMembers}></Task2CountriesList>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Task7List from './Task7List';
 import './Task7.scss';
+import TaskCard from '../../../../../components/TaskCard';
 
 export default function Task7() {
 
@@ -82,8 +83,10 @@ export default function Task7() {
 
     return (
         <div tabIndex="1" onKeyPress={handleKeyPress} className="task-7">
-            <h3>Task 7</h3>
-            <h4>Finals of Champions League</h4>
+            <TaskCard
+                taskNumber="7"
+                taskTitle="Finals of Champions League"
+            ></TaskCard>
             <Task7List
                 finals={finals}
                 delItem={delItem}

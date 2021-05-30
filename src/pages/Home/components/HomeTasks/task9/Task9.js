@@ -2,11 +2,14 @@ import React from 'react';
 import VipUsersList from './vipUsers/VipUsersList';
 import UsersList from './Users/UsersList';
 import './Task9.scss';
+import TaskCard from '../../../../../components/TaskCard';
 
 export default function Task9() {
     return (
         <>
-            <h3>Task-9</h3>
+            <TaskCard
+                taskNumber="9"
+            ></TaskCard>
             <div className='task-9'>
                 <UsersList/>
                 <VipUsersList />

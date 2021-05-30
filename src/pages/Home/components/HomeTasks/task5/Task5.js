@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Task5Table from './Task5Table';
 import './Task5.scss';
+import TaskCard from '../../../../../components/TaskCard';
 
 export default function Task5() {
 
@@ -45,8 +46,10 @@ export default function Task5() {
 
     return (
         <div className="task-5">
-            <h3>Task 5</h3>
-            <h4>Finals of Champions League</h4>
+            <TaskCard
+                taskNumber="5"
+                taskTitle="Finals of Champions League"
+            />
             <Task5Table finals={finals} delItem={delItem} />
         </div>
     )

@@ -3,6 +3,7 @@ import Task6List from './Task6List';
 import './Task6.scss';
 import Loading from '../../../../../components/Loading/Loading';
 import NotFound from '../../../../../components/NotFound/NotFound';
+import TaskCard from '../../../../../components/TaskCard';
 
 export default function Task6() {
 
@@ -29,8 +30,10 @@ export default function Task6() {
     
     return (
         <div className="task-6">
-            <h3>Task-6</h3>
-            <h4>Breaking Bad ©</h4>
+            <TaskCard
+                taskNumber="6"
+                taskTitle="Breaking Bad ©"
+            />
             {isLoading ? <Loading /> : <Task6List quotes={quotes} showAddInfo={showAddInfo} />}
             {error ? <NotFound /> : null }
         </div>

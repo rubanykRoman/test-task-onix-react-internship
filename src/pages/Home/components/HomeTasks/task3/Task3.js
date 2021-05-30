@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Task3Table from './Task3Tables';
 import './Task3.scss';
+import TaskCard from '../../../../../components/TaskCard';
 
 export default function Task3() {
 
@@ -39,7 +40,7 @@ export default function Task3() {
 
     return (
         <div className="task-3">
-            <h3>Task-3</h3>
+            <TaskCard taskNumber="3"/>
             <Task3Table
                 withSortFoo={withSortFoo}
                 bubbleSort={bubbleSort}

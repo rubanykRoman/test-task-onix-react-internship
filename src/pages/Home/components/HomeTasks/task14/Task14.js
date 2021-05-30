@@ -4,6 +4,7 @@ import { getContacts, deleteContact, isLoadingToggle} from '../../../../../store
 import { connect } from 'react-redux';
 import './Task14.scss';
 import Loading from '../../../../../components/Loading/Loading';
+import TaskCard from '../../../../../components/TaskCard';
 
 function Task14({ contacts, getContacts, deleteContact, isLoading, isLoadingToggle }) {
     
@@ -20,7 +21,9 @@ function Task14({ contacts, getContacts, deleteContact, isLoading, isLoadingTogg
 
     return (
         <>
-            <h3>Task-14</h3>
+            <TaskCard
+                taskNumber="14"
+            ></TaskCard>
             <button
                 onClick={onUpdateClick}
                 className="updButton"

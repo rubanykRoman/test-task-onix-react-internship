@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import UsersList from './Users/UsersList';
+import UsersList from './UsersList';
 import { getContacts, deleteContact, isLoadingToggle} from '../../../../../store/task14/actions';
 import { connect } from 'react-redux';
 import './Task14.scss';
@@ -21,18 +21,12 @@ const Task14 = ({ contacts, getContacts, deleteContact, isLoading, isLoadingTogg
 
     return (
         <>
-            <TaskCard
-                taskNumber="14"
-            ></TaskCard>
-            <button
-                onClick={onUpdateClick}
-                className="updButton"
-            >
-                {isLoading ?
-                    <Loading /> :
-                    <p>UPDATE CONTACTS</p>
-                }
-            </button>
+            <TaskCard taskNumber="14"/>
+            {!isLoading ? 
+
+            <button onClick={onUpdateClick} className="updButton">UPDATE CONTACTS</button>
+            :<Loading/>}
+
             <div className='task-14'>
                 <UsersList
                     contacts={contacts}

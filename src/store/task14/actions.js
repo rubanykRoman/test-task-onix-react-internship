@@ -1,4 +1,4 @@
-import api from '..//..//pages/Home/components/HomeTasks/task14/Users/usersApi';
+import api from '../../services/usersApi';
 
 
 export const CONTACTS_GET_CONTACTS = 'CONTACTS_GET_CONTACTS';

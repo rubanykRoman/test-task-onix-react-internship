@@ -1,9 +1,9 @@
 .task-2 {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    font-size: 13px;
     .new-members {
         h4 {
             font-style: italic;
@@ -17,7 +17,6 @@
         }
     }
     .most-popular-countries {
-        margin-left: 400px;
         th {
             font-style: italic;
             font-size: 15px;

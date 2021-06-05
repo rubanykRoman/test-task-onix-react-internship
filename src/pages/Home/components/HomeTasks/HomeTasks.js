@@ -9,19 +9,16 @@ import Task7 from './task7/Task7';
 import Task9 from './task9/Task9';
 import Task14 from './task14/Task14';
 
-const HomeTasks = () => {
-    return (
-        <div className="home-tasks">
-            <Task14></Task14>
-            <Task9></Task9>
-            <Task7></Task7>
-            <Task6></Task6>
-            <Task5></Task5>
-            <Task4></Task4>
-            <Task3></Task3>
-            <Task2></Task2>
-        </div>
-    )
-}
+const HomeTasks = () => 
+    <div className="home-tasks">
+        <Task14></Task14>
+        {/* <Task9></Task9> */}
+        {/* <Task7></Task7> */}
+        {/* <Task6></Task6> */}
+        {/* <Task5></Task5> */}
+        {/* <Task4></Task4> */}
+        {/* <Task3></Task3> */}
+        {/* <Task2></Task2> */}
+    </div>
 
 export default HomeTasks;

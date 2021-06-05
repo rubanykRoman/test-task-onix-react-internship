@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.scss';
 import ThemeProvider from './contexts/themeContext';
-import Home from './pages/Home/components/Home';
+import HomePage from './pages/Home/components/HomePage';
 
-const App = () => {
-  return (
-    <ThemeProvider>
-      <Home />
-    </ThemeProvider>
-  );
-}
+const App = () => 
+  <ThemeProvider>
+    <HomePage />
+  </ThemeProvider>
 
 export default App;

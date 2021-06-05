@@ -34,11 +34,12 @@ h3 {
     margin-bottom: 15px;
     border-radius: 25px;
     background-color: aqua;
-    color: grey;
+    color: rgb(83, 81, 81);
+    font-weight: bold;
     cursor: pointer;
 }
 
 .updButton:hover {
-    color: white;
+    color: rgb(253, 251, 251);
     background-color: aquamarine;
 }

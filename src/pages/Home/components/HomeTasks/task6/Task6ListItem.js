@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Task6ListItem = ({quoteObj,showAddInfo}) => {
-    return (
-        <li onClick={() => showAddInfo(quoteObj)}>{quoteObj.quote}</li>
-    )
-}
+const Task6ListItem = ({quoteObj,showAddInfo}) => 
+    <li onClick={() => showAddInfo(quoteObj)}>{quoteObj.quote}</li>
 
 Task6ListItem.propTypes = {
     quoteObj: PropTypes.object,

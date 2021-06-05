@@ -5,6 +5,8 @@ import Loading from '../../../../../components/Loading/Loading';
 import NotFound from '../../../../../components/NotFound/NotFound';
 import TaskCard from '../../../../../components/TaskCard';
 
+const URL = "https://www.breakingbadapi.com/api/quotes";
+
 const Task6 = () => {
 
     const [quotes, setQuotes] = useState([]);
@@ -19,7 +21,7 @@ const Task6 = () => {
         setIsLoading(true);
         setError(null);
 
-        fetch("https://www.breakingbadapi.com/api/quotes")
+        fetch(URL)
             .then((response) => {
                 return response.json();
             })

@@ -5,8 +5,9 @@ import './HeaderLinks.scss';
 export default function HeaderLinks() {
     return (
         <div className="header-links">
-            <div><Link to="/">HomePage</Link></div>
-            <div><Link to="/homeTasks">HomeTasks</Link></div>
+            <div><Link to="/">StartPage</Link></div>
+            <div><Link to="/hometasks">HomeTasks</Link></div> 
+            <div><Link to="/testtask">TestTask</Link></div>
         </div>
     )
 }

@@ -1,0 +1,21 @@
+.home-tasks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-tasks-links {
+    margin: 15px 0px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(44, 97, 79);
+    div {
+        margin-left: 8px;
+    }
+    div:hover {
+        color: rgb(44, 168, 125);
+        ;
+    }
+}

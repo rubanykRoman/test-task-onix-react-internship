@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Task3Table from './Task3Tables';
-import './Task3.scss';
+import '../scss/Task3.scss';
 import TaskCard from '../../../components/TaskCard';
 
 const Task3 = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UsersList = ({ contacts, deleteContact }) => (
+const Task14UsersList = ({ contacts, deleteContact }) => (
   <div>
     <h3>Contacts</h3>
     <ol>
@@ -19,4 +19,4 @@ const UsersList = ({ contacts, deleteContact }) => (
   </div>
 );
 
-export default UsersList;
+export default Task14UsersList;

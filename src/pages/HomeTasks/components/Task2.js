@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Task2CountriesList from './Task2CountriesTable';
 import Task2MemberList from './Task2MemberList';
-import './Task2.scss';
+import '../scss/Task2.scss';
 import TaskCard from '../../../components/TaskCard';
 
 const Task2 = () => {

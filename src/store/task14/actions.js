@@ -1,8 +1,10 @@
 import api from '../../services/usersApi';
 
+const URI = "/users"
+
 export const CONTACTS_GET_CONTACTS = 'CONTACTS_GET_CONTACTS';
 export const getContacts = () => async (dispatch) => {
-  const { data } = await api.get();
+  const { data } = await api.get(URI);
   dispatch({
     type: CONTACTS_GET_CONTACTS,
     payload: data,

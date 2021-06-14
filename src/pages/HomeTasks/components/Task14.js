@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import UsersList from './UsersList';
+import UsersList from './Task14UsersList';
 import { getContacts, deleteContact, isLoadingToggle } from '../../../store/task14/actions';
-import './Task14.scss';
+import '../scss/Task14.scss';
 import Loading from '../../../components/Loading/Loading';
 import TaskCard from '../../../components/TaskCard';
 

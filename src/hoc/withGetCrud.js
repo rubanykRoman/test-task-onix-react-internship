@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import api from '../services/usersApi';
 
-const withGetCrud = (Component, api) => {
+const withGetCrud = (Component, URI) => {
   const WithGetCrud = () => {
     const [list, setList] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
-      api.get().then(({ data }) => setList(data))
+      api.get(URI).then(({ data }) => setList(data))
         .catch((err) => setError(err))
         .finally(() => setIsLoading(false));
     }, [api]);

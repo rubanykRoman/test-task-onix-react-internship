@@ -2,11 +2,10 @@ import React from 'react';
 import Loading from '../../../components/Loading/Loading';
 import NotFound from '../../../components/NotFound/NotFound';
 import withGetCrud from '../../../hoc/withGetCrud';
-import usersApi from '../../../services/usersApi';
 
-const UsersList = ({
-  list, remove, isLoading, error 
-}) => (
+const URI = '/users'
+
+const Task9UsersList = ({list, remove, isLoading, error }) => 
   <>
     { isLoading ? <Loading />
       : (
@@ -29,6 +28,5 @@ const UsersList = ({
       )}
     {error ? <NotFound /> : null }
   </>
-);
 
-export default withGetCrud(UsersList, usersApi);
+export default withGetCrud(Task9UsersList, URI);

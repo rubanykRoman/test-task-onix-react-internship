@@ -1,14 +1,14 @@
 import React from 'react';
 import './HomeTasks.scss';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from "react-router-dom";
-import Task2 from './task2/Task2';
-import Task3 from './task3/Task3';
-import Task4 from './task4/Task4';
-import Task5 from './task5/Task5';
-import Task6 from './task6/Task6';
-import Task7 from './task7/Task7';
-import Task9 from './task9/Task9';
-import Task14 from './task14/Task14';
+import Task2 from './components/Task2';
+import Task3 from './components/Task3';
+import Task4 from './components/Task4';
+import Task5 from './components/Task5';
+import Task6 from './components/Task6';
+import Task7 from './components/Task7';
+import Task9 from './components/Task9';
+import Task14 from './components/Task14';
 import HomeTasksLinks from './HomeTasksLinks';
 
 const HomeTasks = () => (

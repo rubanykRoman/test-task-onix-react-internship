@@ -1,7 +1,7 @@
 import React from 'react';
-import './GlobalFooter.scss';
+import './Footer.scss';
 
-const GlobalFooter = () => (
+const Footer = () => 
   <footer className="global-footer">
     <div>
       <span>
@@ -12,6 +12,5 @@ const GlobalFooter = () => (
       </span>
     </div>
   </footer>
-);
 
-export default GlobalFooter;
+export default Footer;

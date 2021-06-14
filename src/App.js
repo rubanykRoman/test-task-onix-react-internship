@@ -4,14 +4,13 @@ import ThemeProvider from './contexts/themeContext';
 import TestTask from './pages/TestTask/TestTask';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import HomeTasks from './pages/HomeTasks/HomeTasks';
-import HeaderLinks from './components/HeaderLinks/HeaderLinks';
 import StartPage from './pages/StartPage/StartPage';
-import GlobalFooter from './components/GlobalFooter/GlobalFooter';
+import Layout from './layout/Layout';
 
 const App = () => (
   <ThemeProvider>
     <Router>
-      <HeaderLinks/>
+      <Layout>
         <Switch>
           <Route path="/" exact component={StartPage}></Route>
           <Route path="/testtask" exact component={TestTask}></Route>
@@ -20,7 +19,7 @@ const App = () => (
             <Redirect to="/" />
           </Route>
         </Switch>
-      <GlobalFooter/>
+      </Layout>
     </Router>
   </ThemeProvider>
 );

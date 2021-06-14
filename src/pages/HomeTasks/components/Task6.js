@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Task6List from './Task6List';
-import './Task6.scss';
+import '../scss/Task6.scss';
 import Loading from '../../../components/Loading/Loading';
 import NotFound from '../../../components/NotFound/NotFound';
 import TaskCard from '../../../components/TaskCard';
+import {breakingBadURL} from '../../../constants/URLs'; 
 
-const URL = 'https://www.breakingbadapi.com/api/quotes';
+const URI = '/quotes';
 
 const Task6 = () => {
   const [quotes, setQuotes] = useState([]);
@@ -20,7 +21,7 @@ const Task6 = () => {
     setIsLoading(true);
     setError(null);
 
-    fetch(URL)
+    fetch(breakingBadURL + URI)
       .then((response) => {
         return response.json();
       })

@@ -1,8 +1,8 @@
 import React from 'react';
-import VipUsersList from './VipUsersList';
-import './Task9.scss';
+import VipUsersList from './Task9VipUsersList';
+import '../scss/Task9.scss';
 import TaskCard from '../../../components/TaskCard';
-import UsersList from './UsersList';
+import UsersList from './Task9UsersList';
 
 const Task9 = () => (
   <>

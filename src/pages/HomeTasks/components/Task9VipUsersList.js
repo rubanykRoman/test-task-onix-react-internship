@@ -1,10 +1,11 @@
 import React from 'react';
 import withGetCrud from '../../../hoc/withGetCrud';
-import vipUsersApi from '../../../services/vipUsersApi';
 import Loading from '../../../components/Loading/Loading';
 import NotFound from '../../../components/NotFound/NotFound';
 
-const VipUsersList = ({
+const URI = '/vipUsers';
+
+const Task9VipUsersList = ({
   list, remove, isLoading, error 
 }) => (
   <>
@@ -29,4 +30,4 @@ const VipUsersList = ({
   </>
 );
 
-export default withGetCrud(VipUsersList, vipUsersApi);
+export default withGetCrud(Task9VipUsersList, URI);
